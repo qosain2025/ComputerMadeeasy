@@ -97,7 +97,7 @@ This website is configured and ready to deploy directly to Vercel with zero comp
    - Build Command: `next build` (default).
    - Output Directory: `.next` (default).
 5. **(Optional) Environment Variables:**
-   - `NEXT_PUBLIC_SITE_URL`: Set this to your actual Vercel domain (e.g. `https://computer-basics-made-simple.vercel.app` or custom domain) so canonical tags and sitemaps match your live domain.
+   - `NEXT_PUBLIC_SITE_URL`: Set this to your actual Vercel domain (defaults to `https://computermadeeasy.vercel.app` or your custom domain) so canonical tags and sitemaps match your live domain.
    - `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`: (Optional) Add your Google verification token.
 6. **Deploy:**
    - Click **"Deploy"**. Vercel will build all static HTML pages in less than two minutes.

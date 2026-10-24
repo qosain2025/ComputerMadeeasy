@@ -1,4 +1,19 @@
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://computerbasics.vercel.app';
+export function getSiteUrl(): string {
+  const envUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.SITE_URL;
+  if (envUrl) {
+    const formatted = envUrl.startsWith('http') ? envUrl : `https://${envUrl}`;
+    return formatted.replace(/\/$/, '');
+  }
+  if (process.env.VERCEL_PROJECT_PRODUCTION_URL) {
+    return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
+  }
+  if (process.env.VERCEL_URL) {
+    return `https://${process.env.VERCEL_URL}`;
+  }
+  return 'https://computermadeeasy.vercel.app';
+}
+
+export const SITE_URL = getSiteUrl();
 export const SITE_NAME = 'Computer Basics Made Simple';
 export const FOUNDER_NAME = 'Raja Qosain Shamir';
 export const FOUNDER_TITLE = 'Founder & Lead Instructor';

@@ -495,7 +495,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     letter: 'U',
     category: 'Internet',
     simpleDefinition: 'Uniform Resource Locator: the full web address typed into a browser to find a specific website or online file.',
-    example: 'https://computerbasics.vercel.app/what-is-a-computer'
+    example: 'https://computermadeeasy.vercel.app/what-is-a-computer'
   },
   {
     term: 'USB (Universal Serial Bus)',
